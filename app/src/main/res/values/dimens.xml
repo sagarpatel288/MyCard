@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_space">16dp</dimen>
+    <dimen name="view_space_small">8dp</dimen>
+    <dimen name="view_space_large">32dp</dimen>
+    <dimen name="view_space_x_large">40dp</dimen>
+    <dimen name="tv_heading_one">24sp</dimen>
+    <dimen name="tv_heading_two">22sp</dimen>
+    <dimen name="tv_heading_three">20sp</dimen>
+    <dimen name="tv_heading_four">18sp</dimen>
+    <dimen name="tv_heading_five">16sp</dimen>
+    <dimen name="tv_heading_six">14sp</dimen>
+    <dimen name="tv_heading_seven">12sp</dimen>
+    <dimen name="view_divider">1dp</dimen>
+    <dimen name="img_profile_height">250dp</dimen>
+</resources>

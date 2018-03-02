@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root_nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.creativeconflux.srdp.mycard.ui.activities.MainActivity"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_grand_parent_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_select_profile_picture"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/view_space_large"
+            android:padding="@dimen/view_space_large"
+            />
+
+        <ImageView
+            android:id="@+id/iv_profile_picture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_profile_height"
+            android:contentDescription="@string/card_image"
+            android:scaleType="centerCrop"
+            />
+
+        <!--Image Button Background-->
+        <View
+            android:id="@+id/ibtn_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_space_x_large"
+            android:layout_alignBottom="@id/iv_profile_picture"
+            android:layout_alignParentEnd="true"
+            android:background="@color/translucent_shadow"
+            android:contentDescription="@string/label_select_profile_picture"
+            android:paddingEnd="@dimen/view_space"
+            android:paddingLeft="@dimen/view_space"
+            android:paddingRight="@dimen/view_space"
+            android:paddingStart="@dimen/view_space"
+            android:src="@android:drawable/ic_menu_edit"
+            />
+
+        <!--Image Button-->
+        <ImageButton
+            android:id="@+id/ibtn_select_profile_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_profile_picture"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/label_select_profile_picture"
+            android:paddingEnd="@dimen/view_space"
+            android:paddingLeft="@dimen/view_space"
+            android:paddingRight="@dimen/view_space"
+            android:paddingStart="@dimen/view_space"
+            android:src="@android:drawable/ic_menu_edit"
+            />
+
+        <!--Full Name-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_full_name"
+            style="@style/Txt"
+            android:layout_marginTop="@dimen/view_space"
+            android:layout_below="@id/iv_profile_picture"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_full_name"
+                style="@style/TxtTitle"
+                android:hint="@string/hint_full_name"
+                android:inputType="textCapWords"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Username-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_slack_username"
+            style="@style/Txt"
+            android:layout_below="@id/til_full_name"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_slack_username"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_slack_username"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Email-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_email_id"
+            style="@style/Txt"
+            android:layout_below="@id/til_slack_username"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_email_id"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_email_id"
+                android:inputType="textEmailAddress"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Contact Number-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_contact"
+            style="@style/Txt"
+            android:layout_below="@id/til_email_id"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_contact"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_contact"
+                android:inputType="number"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Scholarship Track-->
+        <TextView
+            android:id="@+id/tv_label_scholarship_track"
+            style="@style/TxtTitle"
+            android:paddingTop="@dimen/view_space"
+            android:paddingBottom="@dimen/view_space"
+            android:paddingStart="@dimen/view_space_large"
+            android:paddingLeft="@dimen/view_space_large"
+            android:paddingEnd="@dimen/view_space_large"
+            android:paddingRight="@dimen/view_space_large"
+            android:layout_below="@id/til_contact"
+            android:text="@string/label_scholarship_track"
+            />
+
+        <!--Scholarship Radio Group-->
+        <RadioGroup
+            android:id="@+id/rg_scholarship_track"
+            style="@style/Txt"
+            android:paddingLeft="@dimen/view_space_large"
+            android:paddingStart="@dimen/view_space_large"
+            android:paddingEnd="@dimen/view_space_large"
+            android:paddingRight="@dimen/view_space_large"
+            android:layout_below="@id/tv_label_scholarship_track"
+            >
+
+            <RadioButton
+                android:id="@+id/rbtn_android_basics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/view_space"
+                android:text="@string/label_android_basics"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtn_android_developer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/view_space"
+                android:text="@string/label_android_developer"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtn_front_end_web_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/view_space"
+                android:text="@string/label_front_end_web_basic"
+                android:drawablePadding="@dimen/view_space"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtn_mobile_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/view_space"
+                android:text="@string/label_mobile_web"
+                />
+
+        </RadioGroup>
+
+        <!--Github Profile-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_github_profile"
+            style="@style/Txt"
+            android:layout_below="@id/rg_scholarship_track"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_github_profile"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_github_profile"
+                android:inputType="textWebEmailAddress"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Idea-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_idea"
+            style="@style/Txt"
+            android:layout_below="@id/til_github_profile"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_idea"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_idea"
+                android:inputType="textMultiLine"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Resource Link-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_resource_link"
+            style="@style/Txt"
+            android:layout_below="@id/til_idea"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_resource_link"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_resource_link"
+                android:inputType="textWebEmailAddress"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Your Experience-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_experience"
+            style="@style/Txt"
+            android:layout_below="@id/til_resource_link"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_experience"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_your_experience"
+                android:inputType="textMultiLine"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Problems and Solution if any-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_problem_solution"
+            style="@style/Txt"
+            android:layout_below="@id/til_experience"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_problem"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_problems_resolutions"
+                android:inputType="textMultiLine"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--About You And Your Journey-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_about_journey"
+            style="@style/Txt"
+            android:layout_below="@id/til_problem_solution"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_about_journey"
+                style="@style/Txt.TxtHeader"
+                android:hint="@string/hint_about_journey"
+                android:inputType="textMultiLine"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Select background-->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_about_journey"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/view_space"
+            android:background="@drawable/bg_gradient"
+            android:padding="@dimen/view_space_small"
+            android:text="@string/label_save"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

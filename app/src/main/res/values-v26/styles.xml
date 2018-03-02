@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_heading_four</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:paddingStart">@dimen/view_space</item>
+        <item name="android:paddingLeft">@dimen/view_space</item>
+        <item name="android:paddingRight">@dimen/view_space</item>
+        <item name="android:paddingEnd">@dimen/view_space</item>
+        <item name="android:layout_marginLeft">@dimen/view_space</item>
+        <item name="android:layout_marginStart">@dimen/view_space</item>
+        <item name="android:layout_marginEnd">@dimen/view_space</item>
+        <item name="android:layout_marginRight">@dimen/view_space</item>
+        <item name="android:autoLink">all</item>
+        <item name="android:importantForAutofill">noExcludeDescendants</item>
+    </style>
+</resources>

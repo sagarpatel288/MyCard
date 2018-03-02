@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/view_space"
+            android:padding="@dimen/view_space"
+            android:text="@string/title_select_image"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tv_heading_one"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_from_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/view_space"
+            android:text="@string/label_from_gallery"
+            android:textSize="@dimen/tv_heading_three"
+            />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_divider"
+            android:layout_below="@+id/tv_from_gallery"
+            android:background="@android:color/darker_gray"
+            />
+
+        <TextView
+            android:id="@+id/tv_by_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_divider"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/view_space"
+            android:text="@string/label_by_camera"
+            android:textSize="@dimen/tv_heading_three"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_by_camera"
+            android:layout_marginTop="@dimen/view_space"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/view_space"
+            android:text="@string/label_cancel"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tv_heading_three"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

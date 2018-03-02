@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. --> <!--NoActionBar as we will use Toolbar-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.BtnRippleStateList">
+        <item name="colorButtonNormal">@color/colorEnd</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="Txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_heading_four</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:paddingStart">@dimen/view_space</item>
+        <item name="android:paddingLeft">@dimen/view_space</item>
+        <item name="android:paddingRight">@dimen/view_space</item>
+        <item name="android:paddingEnd">@dimen/view_space</item>
+        <item name="android:layout_marginLeft">@dimen/view_space</item>
+        <item name="android:layout_marginStart">@dimen/view_space</item>
+        <item name="android:layout_marginEnd">@dimen/view_space</item>
+        <item name="android:layout_marginRight">@dimen/view_space</item>
+        <item name="android:autoLink">all</item>
+    </style>
+
+    <style name="Txt.AllPadding">
+        <item name="android:paddingTop">@dimen/view_space</item>
+        <item name="android:paddingBottom">@dimen/view_space</item>
+    </style>
+
+    <style name="TxtTitle" parent="Txt">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TxtTitle.TxtHeading">
+        <item name="android:paddingTop">@dimen/view_space</item>
+        <item name="android:paddingBottom">@dimen/view_space</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Txt.TxtHeader">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Txt.TxtFooter">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TxtValue" parent="Txt.TxtHeader">
+        <item name="android:textSize">@dimen/tv_heading_five</item>
+    </style>
+
+</resources>
