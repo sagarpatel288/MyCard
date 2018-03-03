@@ -13,7 +13,8 @@ In this application various concepts have been implemented including what we hav
 6. How to read, write and store file
 7. Marshmallow Permission Management
 8. Toolbar and Menu
-9. Immersive mode
+9. Color Palettes and Swatches
+10. Immersive mode
 
 About App
 This application is kind of filling up form in which user can select and set a profile picture.
