@@ -74,7 +74,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_full_name"
-                style="@style/TxtTitle"
+                style="@style/TxtHeader"
                 android:hint="@string/hint_full_name"
                 android:inputType="textCapWords"
                 />
@@ -90,7 +90,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_slack_username"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_slack_username"
                 />
 
@@ -105,7 +105,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_email_id"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_email_id"
                 android:inputType="textEmailAddress"
                 />
@@ -121,7 +121,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_contact"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_contact"
                 android:inputType="number"
                 />
@@ -131,7 +131,7 @@
         <!--Scholarship Track-->
         <TextView
             android:id="@+id/tv_label_scholarship_track"
-            style="@style/TxtTitle"
+            style="@style/TxtHeader"
             android:paddingTop="@dimen/view_space"
             android:paddingBottom="@dimen/view_space"
             android:paddingStart="@dimen/view_space_large"
@@ -197,7 +197,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_github_profile"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_github_profile"
                 android:inputType="textWebEmailAddress"
                 />
@@ -213,7 +213,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_idea"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_idea"
                 android:inputType="textMultiLine"
                 />
@@ -229,7 +229,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_resource_link"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_resource_link"
                 android:inputType="textWebEmailAddress"
                 />
@@ -245,7 +245,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_experience"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_your_experience"
                 android:inputType="textMultiLine"
                 />
@@ -261,7 +261,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_problem"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_problems_resolutions"
                 android:inputType="textMultiLine"
                 />
@@ -277,7 +277,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tiet_about_journey"
-                style="@style/Txt.TxtHeader"
+                style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_about_journey"
                 android:inputType="textMultiLine"
                 />

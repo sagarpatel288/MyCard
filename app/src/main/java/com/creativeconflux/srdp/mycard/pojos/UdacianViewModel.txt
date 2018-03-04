@@ -1,0 +1,38 @@
+package com.creativeconflux.srdp.mycard.pojos;
+
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.ViewModel;
+
+/**
+ * Created by srdpatel on 3/4/2018.
+ */
+
+public class UdacianViewModel extends ViewModel {
+
+    private String udacianId;
+    private LiveData<Udacian> udacian;
+
+    public String getUdacianId() {
+        return udacianId;
+    }
+
+    public void init(String udacianId) {
+        this.udacianId = udacianId;
+    }
+
+    public void setUdacianId(String udacianId) {
+        this.udacianId = udacianId;
+    }
+
+    public LiveData<Udacian> getUdacian() {
+        return udacian;
+    }
+
+    public void setUdacian(LiveData<Udacian> udacian) {
+        this.udacian = udacian;
+    }
+
+    public UdacianViewModel() {
+
+    }
+}

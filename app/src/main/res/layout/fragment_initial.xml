@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.creativeconflux.srdp.mycard.InitialFragment">
+
+    <!--Select background-->
+    <Button
+        android:id="@+id/btn_make_my_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/view_space"
+        android:background="@drawable/bg_gradient"
+        android:padding="@dimen/view_space_small"
+        android:text="@string/label_make_my_card"
+        android:textColor="@color/white"
+        />
+
+    <!--Select background-->
+    <Button
+        android:id="@+id/btn_submit_idea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_make_my_card"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/view_space"
+        android:background="@drawable/bg_gradient"
+        android:padding="@dimen/view_space_small"
+        android:text="@string/label_submit_idea"
+        android:textColor="@color/white"
+        />
+
+
+</RelativeLayout>

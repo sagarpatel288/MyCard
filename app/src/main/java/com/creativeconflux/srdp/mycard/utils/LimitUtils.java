@@ -5,5 +5,5 @@ package com.creativeconflux.srdp.mycard.utils;
  */
 
 public class LimitUtils {
-    public static final int LIMIT_MIN_PHONE_NUMBER = 4;
+    public static final int LIMIT_MIN_PHONE_NUMBER = 10;
 }

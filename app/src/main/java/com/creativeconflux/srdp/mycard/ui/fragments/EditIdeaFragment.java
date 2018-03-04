@@ -55,7 +55,7 @@ import static com.creativeconflux.srdp.mycard.utils.StringMethods.getNonNullStri
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EditFragment extends Fragment implements OnSelectImageListener, View.OnClickListener,
+public class EditIdeaFragment extends Fragment implements OnSelectImageListener, View.OnClickListener,
             NestedScrollView.OnScrollChangeListener {
 
     //region Compile time UI Variables
@@ -95,7 +95,7 @@ public class EditFragment extends Fragment implements OnSelectImageListener, Vie
     private MyDialogFrag myDialogFrag;
     //endregion
 
-    public EditFragment() {
+    public EditIdeaFragment() {
         // Required empty public constructor
     }
 
@@ -116,7 +116,7 @@ public class EditFragment extends Fragment implements OnSelectImageListener, Vie
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         setHasOptionsMenu(true);
-        View view = inflater.inflate(R.layout.fragment_add_edit, container, false);
+        View view = inflater.inflate(R.layout.fragment_add_edit_idea, container, false);
         mContext = view.getContext();
         setViews(view);
         hashMap = new HashMap<>();
@@ -211,7 +211,7 @@ public class EditFragment extends Fragment implements OnSelectImageListener, Vie
             if (imagePath != null) {
                 bundle.putString(IntentKeys.STRING_IMAGE_PATH, imagePath);
             }
-            ((MainActivity) getActivity()).commitFragmentTransaction(new CardFragment(), true, bundle);
+            ((MainActivity) getActivity()).commitFragmentTransaction(new IdeaFragment(), true, bundle);
         }
     }
 
@@ -253,7 +253,7 @@ public class EditFragment extends Fragment implements OnSelectImageListener, Vie
 
     private boolean allPermissionsGranted() {
         //Check if permission has granted or not
-        if (!checkPermissions(permissions)) {
+        if (!hasPermission(permissions)) {
             //Check if permission has denied with or without "don't ask again" option
             //If "don't ask again" was not checked, show reason for permission
             if (shouldShowRational(permissions)) {
@@ -281,7 +281,7 @@ public class EditFragment extends Fragment implements OnSelectImageListener, Vie
         myDialogFrag.show(getActivity().getFragmentManager(), getString(R.string.dialog_img));
     }
 
-    private boolean checkPermissions(String[] permissions) {
+    private boolean hasPermission(String[] permissions) {
         for (int i = 0; i < permissions.length - 1; i++) {
             if (ActivityCompat.checkSelfPermission(mContext, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
                 return false;
@@ -375,7 +375,7 @@ public class EditFragment extends Fragment implements OnSelectImageListener, Vie
         // Using glide for better image handling
         myDialogFrag.dismiss();
 
-        Glide.with(EditFragment.this)
+        Glide.with(EditIdeaFragment.this)
                 .load(imagePath)
                 .thumbnail(0.50f)
                 .apply(new RequestOptions().centerCrop())

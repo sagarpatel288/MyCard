@@ -9,13 +9,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.FrameLayout;
 
+import com.creativeconflux.srdp.mycard.InitialFragment;
 import com.creativeconflux.srdp.mycard.R;
-import com.creativeconflux.srdp.mycard.ui.fragments.EditFragment;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    FrameLayout frameLayout;
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.layout_frame_container)
+    FrameLayout layoutFrameContainer;
 
     public Toolbar getToolbar() {
         return toolbar;
@@ -29,13 +34,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        frameLayout = findViewById(R.id.layout_frame_container);
+        ButterKnife.bind(this);
         setToolbar();
-        commitFragmentTransaction(new EditFragment(), false, new Bundle());
+        commitFragmentTransaction(new InitialFragment(), false, null);
     }
 
     private void setToolbar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setToolbar(toolbar);
     }

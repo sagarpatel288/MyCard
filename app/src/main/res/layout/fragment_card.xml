@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.creativeconflux.srdp.mycard.ui.customviews.MyNestedScrollView
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_root_nested_scroll"
@@ -26,174 +26,46 @@
 
         <!--Full Name-->
         <TextView
-            android:id="@+id/tv_full_name_title"
-            style="@style/TxtTitle.TxtHeading"
+            android:id="@+id/tv_full_name"
+            style="@style/TxtHeader.TxtHeading.Drawable"
             android:layout_below="@id/iv_profile_picture"
+            android:drawableLeft="@drawable/ic_user_default"
+            android:drawableStart="@drawable/ic_user_default"
             android:paddingBottom="@dimen/view_space"
             android:paddingTop="@dimen/view_space"
             android:text="@string/hint_full_name"
             />
 
+        <!--Address-->
         <TextView
-            android:id="@+id/tv_full_name"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_full_name_title"
-            android:text="@string/placeholder"
-            android:textSize="@dimen/tv_heading_three"
-            />
-
-        <!--Username-->
-        <TextView
-            android:id="@+id/tv_username_title"
-            style="@style/TxtTitle.TxtHeading"
+            android:id="@+id/tv_address"
+            style="@style/Txt.TxtTitle.Drawable"
             android:layout_below="@id/tv_full_name"
-            android:text="@string/hint_slack_username"
+            android:drawableLeft="@drawable/ic_person_location_black"
+            android:drawableStart="@drawable/ic_person_location_black"
+            android:text="@string/label_address"
             />
-
-        <TextView
-            android:id="@+id/tv_slack_username"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_username_title"
-            android:text="@string/placeholder"
-            />
-
 
         <!--Email-->
         <TextView
-            android:id="@+id/tv_email_id_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_slack_username"
-            android:text="@string/hint_email_id"
+            android:id="@+id/tv_email"
+            style="@style/Txt.TxtTitle.Drawable"
+            android:layout_below="@id/tv_address"
+            android:drawableLeft="@drawable/ic_email_black"
+            android:drawableStart="@drawable/ic_email_black"
+            android:text="@string/label_email"
             />
 
-        <TextView
-            android:id="@+id/tv_email_id"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_email_id_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--Contact Number-->
-        <TextView
-            android:id="@+id/tv_contact_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_email_id"
-            android:text="@string/hint_contact"
-            />
-
+        <!--Contact-->
         <TextView
             android:id="@+id/tv_contact"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_contact_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--Scholarship Track-->
-        <TextView
-            android:id="@+id/tv_scholarship_track_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_contact"
-            android:text="@string/label_scholarship_track"
-            />
-
-        <TextView
-            android:id="@+id/tv_scholarship"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_scholarship_track_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--Github Profile-->
-        <TextView
-            android:id="@+id/tv_github_profile_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_scholarship"
-            android:text="@string/hint_github_profile"
-            />
-
-        <TextView
-            android:id="@+id/tv_github_profile"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_github_profile_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--Idea-->
-        <TextView
-            android:id="@+id/tv_idea_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_github_profile"
-            android:text="@string/hint_idea"
-            />
-
-        <TextView
-            android:id="@+id/tv_idea"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_idea_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--Resource Link-->
-        <TextView
-            android:id="@+id/tv_resource_link_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_idea"
-            android:text="@string/hint_resource_link"
-            />
-
-        <TextView
-            android:id="@+id/tv_resource_link"
-            style="@style/TxtValue"
-            android:layout_below="@+id/tv_resource_link_title"
-            android:text="@string/placeholder"
-            />
-
-
-        <!--Your Experience-->
-        <TextView
-            android:id="@+id/tv_experience_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_resource_link"
-            android:text="@string/hint_your_experience"
-            />
-
-        <TextView
-            android:id="@+id/tv_experience"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_experience_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--Problems and Solution if any-->
-        <TextView
-            android:id="@+id/tv_problem_solution_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_experience"
-            android:text="@string/hint_problems_resolutions"
-            />
-
-        <TextView
-            android:id="@+id/tv_problem_solution"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_problem_solution_title"
-            android:text="@string/placeholder"
-            />
-
-        <!--About You And Your Journey-->
-        <TextView
-            android:id="@+id/tv_about_journey_title"
-            style="@style/TxtTitle.TxtHeading"
-            android:layout_below="@id/tv_problem_solution"
-            android:text="@string/hint_about_journey"
-            />
-
-        <TextView
-            android:id="@+id/tv_about_journey"
-            style="@style/TxtValue"
-            android:layout_below="@id/tv_about_journey_title"
+            style="@style/Txt.TxtTitle.Drawable"
+            android:layout_below="@id/tv_email"
+            android:drawableLeft="@drawable/ic_phone_black"
+            android:drawableStart="@drawable/ic_phone_black"
             android:text="@string/placeholder"
             />
 
     </RelativeLayout>
 
-</com.creativeconflux.srdp.mycard.ui.customviews.MyNestedScrollView>
+</android.support.v4.widget.NestedScrollView>

@@ -8,17 +8,37 @@ import android.os.Parcelable;
  */
 
 public class Udacian implements Parcelable {
-    String fullName;
-    String userName;
-    String emailId;
-    String contactNumber;
-    String scholarshipTrack;
-    String githubProfile;
-    String idea;
-    String ideaResourceLink;
-    String experience;
-    String probAndSols;
-    String about;
+    private String fullName;
+    private String userName;
+    private String emailId;
+    private String contactNumber;
+    private String scholarshipTrack;
+    private String githubProfile;
+    private String idea;
+    private String ideaResourceLink;
+    private String experience;
+    private String probAndSols;
+    private String about;
+    private String address;
+
+    public Udacian(String fullName, String emailId, String contactNumber, String address) {
+        this.fullName = fullName;
+        this.emailId = emailId;
+        this.contactNumber = contactNumber;
+        this.address = address;
+    }
+
+    public Udacian() {
+
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public String getFullName() {
         return fullName;
@@ -145,6 +165,7 @@ public class Udacian implements Parcelable {
         dest.writeString(this.experience);
         dest.writeString(this.probAndSols);
         dest.writeString(this.about);
+        dest.writeString(this.address);
     }
 
     protected Udacian(Parcel in) {
@@ -159,9 +180,10 @@ public class Udacian implements Parcelable {
         this.experience = in.readString();
         this.probAndSols = in.readString();
         this.about = in.readString();
+        this.address = in.readString();
     }
 
-    public static final Parcelable.Creator<Udacian> CREATOR = new Parcelable.Creator<Udacian>() {
+    public static final Creator<Udacian> CREATOR = new Creator<Udacian>() {
         @Override
         public Udacian createFromParcel(Parcel source) {
             return new Udacian(source);

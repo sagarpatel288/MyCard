@@ -18,13 +18,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/tv_heading_four</item>
         <item name="android:inputType">textCapSentences</item>
-        <item name="android:paddingStart">@dimen/view_space</item>
         <item name="android:paddingLeft">@dimen/view_space</item>
         <item name="android:paddingRight">@dimen/view_space</item>
-        <item name="android:paddingEnd">@dimen/view_space</item>
         <item name="android:layout_marginLeft">@dimen/view_space</item>
-        <item name="android:layout_marginStart">@dimen/view_space</item>
-        <item name="android:layout_marginEnd">@dimen/view_space</item>
         <item name="android:layout_marginRight">@dimen/view_space</item>
         <item name="android:autoLink">all</item>
     </style>
@@ -34,17 +30,22 @@
         <item name="android:paddingBottom">@dimen/view_space</item>
     </style>
 
-    <style name="TxtTitle" parent="Txt">
+    <style name="TxtHeader" parent="Txt">
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TxtTitle.TxtHeading">
+    <style name="TxtHeader.TxtHeading">
         <item name="android:paddingTop">@dimen/view_space</item>
         <item name="android:paddingBottom">@dimen/view_space</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Txt.TxtHeader">
+    <style name="TxtHeader.TxtHeading.Drawable">
+        <item name="android:drawablePadding">@dimen/view_space</item>
+        <item name="android:textSize">@dimen/tv_heading_four</item>
+    </style>
+
+    <style name="Txt.TxtTitle">
         <item name="android:textStyle">normal</item>
     </style>
 
@@ -52,8 +53,13 @@
         <item name="android:textStyle">italic</item>
     </style>
 
-    <style name="TxtValue" parent="Txt.TxtHeader">
+    <style name="TxtValue" parent="Txt.TxtTitle">
         <item name="android:textSize">@dimen/tv_heading_five</item>
+    </style>
+
+    <style name="Txt.TxtTitle.Drawable">
+        <item name="android:drawablePadding">@dimen/view_space</item>
+        <item name="android:padding">@dimen/view_space</item>
     </style>
 
 </resources>
