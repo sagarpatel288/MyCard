@@ -16,8 +16,11 @@ In this application various concepts have been implemented including what we hav
 9. Color Palettes and Swatches
 10. Immersive mode
 
-About App
-This application is kind of filling up form in which user can select and set a profile picture.
+*About App*
+The application has currently two options: 1. Make My Card 2. Submit My Idea
+1. Make My Card: Creates generic card
+2. Submit My Idea:
+It is kind of filling up the form in which user can select and set a profile picture too.
 There are some validation checks for required fields such as name, email id etc...
 After filling up the form, user can simply apply save option either from toolbar menu or from the bottom button
 After saving the form, the user is redirected to the immersive screen and able to see filled form
