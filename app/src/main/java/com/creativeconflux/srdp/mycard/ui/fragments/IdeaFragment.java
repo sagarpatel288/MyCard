@@ -1,12 +1,9 @@
 package com.creativeconflux.srdp.mycard.ui.fragments;
 
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
 import android.view.LayoutInflater;
@@ -21,7 +18,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.creativeconflux.srdp.mycard.R;
 import com.creativeconflux.srdp.mycard.listeners.NestedScrollViewScrollStateListener;
 import com.creativeconflux.srdp.mycard.pojos.Udacian;
-import com.creativeconflux.srdp.mycard.pojos.UdacianViewModel;
 import com.creativeconflux.srdp.mycard.ui.activities.MainActivity;
 import com.creativeconflux.srdp.mycard.ui.customviews.MyNestedScrollView;
 import com.creativeconflux.srdp.mycard.utils.AppConstants;
@@ -130,16 +126,17 @@ public class IdeaFragment extends Fragment implements NestedScrollView.OnScrollC
     }
 
     private void setObserver(Udacian udacian){
-        if (udacian != null){
-            UdacianViewModel udacianViewModel = ViewModelProviders.of(this).get(UdacianViewModel.class);
-            udacianViewModel.init(udacian.getEmailId());
-            udacianViewModel.getUdacian().observe(this, new Observer<Udacian>() {
-                @Override
-                public void onChanged(@Nullable Udacian udacian) {
-                    setData(udacian);
-                }
-            });
-        }
+//        if (udacian != null){
+//            UdacianViewModel udacianViewModel = ViewModelProviders.of(this).get(UdacianViewModel.class);
+//            udacianViewModel.init(udacian.getEmailId());
+//            udacianViewModel.getUdacian().observe(this, new Observer<Udacian>() {
+//                @Override
+//                public void onChanged(@Nullable Udacian udacian) {
+//                    setData(udacian);
+//                }
+//            });
+//        }
+        setData(udacian);
     }
 
     private void setData(Udacian udacian) {

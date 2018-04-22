@@ -6,14 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@color/white"
     tools:context="com.creativeconflux.srdp.mycard.ui.activities.MainActivity"
     >
 
     <RelativeLayout
-        android:id="@+id/layout_grand_parent_relative"
+        android:id="@+id/layout_grand_parent_linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/view_space_large"
+        android:orientation="vertical"
         >
 
         <ImageView
@@ -28,42 +30,48 @@
         <TextView
             android:id="@+id/tv_full_name"
             style="@style/TxtHeader.TxtHeading.Drawable"
-            android:layout_below="@id/iv_profile_picture"
             android:drawableLeft="@drawable/ic_user_default"
             android:drawableStart="@drawable/ic_user_default"
             android:paddingBottom="@dimen/view_space"
             android:paddingTop="@dimen/view_space"
             android:text="@string/hint_full_name"
+            android:layout_below="@id/iv_profile_picture"
             />
 
         <!--Address-->
         <TextView
             android:id="@+id/tv_address"
             style="@style/Txt.TxtTitle.Drawable"
-            android:layout_below="@id/tv_full_name"
             android:drawableLeft="@drawable/ic_person_location_black"
             android:drawableStart="@drawable/ic_person_location_black"
             android:text="@string/label_address"
+            android:autoLink="map"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:freezesText="true"
+            android:layout_below="@id/tv_full_name"
             />
 
         <!--Email-->
         <TextView
             android:id="@+id/tv_email"
             style="@style/Txt.TxtTitle.Drawable"
-            android:layout_below="@id/tv_address"
             android:drawableLeft="@drawable/ic_email_black"
             android:drawableStart="@drawable/ic_email_black"
             android:text="@string/label_email"
+            android:layout_below="@id/tv_address"
             />
 
         <!--Contact-->
         <TextView
             android:id="@+id/tv_contact"
             style="@style/Txt.TxtTitle.Drawable"
-            android:layout_below="@id/tv_email"
             android:drawableLeft="@drawable/ic_phone_black"
             android:drawableStart="@drawable/ic_phone_black"
             android:text="@string/placeholder"
+            android:layout_below="@id/tv_email"
             />
 
     </RelativeLayout>

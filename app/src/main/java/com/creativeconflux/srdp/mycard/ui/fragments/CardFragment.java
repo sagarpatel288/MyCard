@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,7 @@ public class CardFragment extends Fragment implements NestedScrollView.OnScrollC
     TextView tvEmail;
     @BindView(R.id.tv_contact)
     TextView tvContact;
-    @BindView(R.id.layout_grand_parent_relative)
+    @BindView(R.id.layout_grand_parent_linear)
     RelativeLayout layoutGrandParentRelative;
     @BindView(R.id.layout_root_nested_scroll)
     NestedScrollView layoutRootNestedScroll;
@@ -75,6 +76,14 @@ public class CardFragment extends Fragment implements NestedScrollView.OnScrollC
     }
 
     private void setListeners() {
+        tvAddress.setMovementMethod(new ScrollingMovementMethod());
+        tvAddress.setSelected(true);
+        tvAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 //        layoutRootNestedScroll.setScrollListener(this);
 //        layoutRootNestedScroll.setOnScrollChangeListener(this);
     }

@@ -94,6 +94,7 @@
                 android:id="@+id/tiet_address"
                 style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_address"
+                android:inputType="text|textCapWords|textPostalAddress"
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -125,7 +126,7 @@
                 android:id="@+id/tiet_contact"
                 style="@style/Txt.TxtTitle"
                 android:hint="@string/hint_contact"
-                android:inputType="number"
+                android:inputType="phone"
                 />
 
         </android.support.design.widget.TextInputLayout>
